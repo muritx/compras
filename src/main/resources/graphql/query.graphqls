@@ -1,0 +1,21 @@
+type Cliente {
+    id:ID,
+    nome:String,
+    email:String
+}
+
+type Query {
+    hello:String
+
+    soma(a:Int, b:Int):Int
+
+    cliente(id:ID):Cliente
+
+    clientes:[Cliente]
+}
+
+type Mutation {
+    saveCliente(id:ID, nome:String, email:String):Cliente
+    
+    deleteCliente(id:ID): Boolean
+}
